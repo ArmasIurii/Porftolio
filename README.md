@@ -21,7 +21,7 @@ This is well known browser game developed by Google and built into the Google Ch
 
 **JavaScript_apps**
 
-Here i tried to put in practice my teoretical knowledges about JS with some well known esercises
+Here i tried to put in practice my theoretical knowledge about JS with some well known exercises.
 
 ====
 
