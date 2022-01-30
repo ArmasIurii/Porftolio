@@ -7,8 +7,8 @@ Next will be presented short info about each folder that contains one or some pr
 
 ====
 
-**Changeable_CSS_with_JS
-**
+**Changeable_CSS_with_JS**
+
 This app was made to demostrate the interaction between  CSS and JS, by clicking on parameters on window we can adjust css parameters of random text preseted there.
 
 ====
