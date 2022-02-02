@@ -13,12 +13,6 @@ This app was made to demostrate the interaction between  CSS and JS, by clicking
 
 ====
 
-**Dino_game**
-
-This is well known browser game developed by Google and built into the Google Chrome web browser.
-
-====
-
 **JavaScript_apps**
 
 Here i tried to put in practice my theoretical knowledge about JS with some well known exercises.
