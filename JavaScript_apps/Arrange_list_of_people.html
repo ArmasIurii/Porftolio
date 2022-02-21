@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Take Off Labs</title>
+</head>
+<body>
+    <h2 id="result"></h2>
+    <script>
+        let people = [
+    { firstName: 'George', lastName: 'Popescu', DOB: '1992-06-20'},
+    { firstName: 'Andrei', lastName: 'Popescu', DOB: '1996-03-01'},
+    { firstName: 'Maria', lastName: 'Ionescu', DOB: '1995-03-13'},
+    { firstName: 'Sergiu', lastName: 'Popescu', DOB: '1990-02-01'},
+    { firstName: 'Elena', lastName: 'Ionescu', DOB: '1990-12-13'}
+]; 
+ people = people.sort((first, second) => {return new Date(first.DOB) - new Date(second.DOB)}  )
+
+var output = people.reduce(function(out, cur) {
+
+    var occurs = out.reduce(function(n, item, index) {
+      return (item.lastName === cur.lastName) ? index : n;
+    }, -1);
+  
+    if (occurs >= 0) {
+  
+      out[occurs].firstName = out[occurs].firstName.concat(cur.firstName);
+  
+    } else {
+  
+      var obj = {
+        lastName: cur.lastName,
+        firstName: [cur.firstName],
+      };
+      out = out.concat([obj]);
+    }
+
+    return out;
+  }, []);
+
+  output.sort((a,b) => (a.lastName.length < b.lastName.length) ? 1 : ((b.lastName.length < a.lastName.length) ? -1 : 0))
+
+  var array_console = []
+  var array_inner = []
+for (let i = 0; i<output.length;i++){
+    array_console.push([Object.values(output[i])[0],':', Object.values(output[i])[1]+'\n'])
+    array_inner.push([Object.values(output[i])[0],':', Object.values(output[i])[1]+'<br />'])
+}
+
+var result_console = array_console.join('').replace(/,/g, ' ').replace(/ :/g, ':');
+var result_inner = array_inner.join('').replace(/,/g, ' ').replace(/ :/g, ':');
+
+console.log(result_console);
+document.getElementById("result").innerHTML = result_inner
+    </script>
+</body>
+</html>
